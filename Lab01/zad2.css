@@ -1,0 +1,48 @@
+body {
+    background: url("images/tlo.jpg");
+}
+
+h4 {
+    font-size: 40px;
+    color: dodgerblue;
+}
+
+table {
+    text-align: center;
+    width: 100%;
+    th {
+        background-color: #003939;
+        color: white;
+    }
+    #secondRow {
+        background-color: lightgray;
+    }
+}
+
+nav {
+    background-color: darkcyan;
+
+    li {
+        border: black;
+        border-width: thin;
+        border-style: solid;
+    }
+
+    ul {
+        ul {
+            background-color: cornflowerblue;
+        }
+    }
+}
+
+section {
+    background-color: darkcyan;
+    padding: 10px;
+}
+
+footer {
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
