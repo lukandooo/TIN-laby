@@ -1,48 +1,120 @@
+body, h2, h4, p, ul, ol, figure {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background: url("images/tlo.jpg");
+    background: url("images/tlo.jpg") no-repeat center center fixed;
+    background-size: cover;
+    padding-top: 50px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.content-wrapper {
+    display: flex;
+    height: 600px;
 }
 
 h4 {
     font-size: 40px;
     color: dodgerblue;
+    margin-bottom: 20px;
 }
 
 table {
     text-align: center;
     width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+
     th {
         background-color: #003939;
         color: white;
+        padding: 12px;
+        border: 1px solid black;
     }
-    #secondRow {
+
+    tr:nth-child(even) {
         background-color: lightgray;
+    }
+
+    td {
+        padding: 10px;
     }
 }
 
 nav {
-    background-color: darkcyan;
+    background-color: rgba(100, 149, 237, 0.7);
+    width: 25%;
 
     li {
-        border: black;
-        border-width: thin;
-        border-style: solid;
+        border-bottom: 1px solid black;
+    }
+
+    a {
+        display: block;
+        padding: 10px 15px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
     }
 
     ul {
+        list-style-type: none;
         ul {
             background-color: cornflowerblue;
+            a{
+                padding-left: 30px;
+                font-weight: normal;
+            }
         }
     }
 }
 
 section {
-    background-color: darkcyan;
-    padding: 10px;
+    background-color: deepskyblue;
+    width: 75%;
+    padding: 30px;
+    color: black;
+
+    overflow-y: auto;
+    height: 100%;
+    box-sizing: border-box;
+
+    p {
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+
+    img {
+        display: block;
+        margin: 20px 0;
+        background-color: white;
+        padding: 10px;
+    }
+}
+ol {
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 20px 0 10px 0;
 }
 
 footer {
     background-color: darkblue;
     color: white;
     text-align: center;
-    padding: 5px;
+    padding: 20px 0;
+
+    p {
+        margin: 5px 0;
+    }
 }
