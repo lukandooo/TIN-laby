@@ -1,0 +1,46 @@
+body {
+    font-family: sans-serif;
+}
+
+footer {
+    text-align: center;
+    background-color: black;
+}
+
+h4 {
+    color: white;
+    padding: 20px;
+    font-weight: lighter;
+}
+
+#content {
+    background-color: #e0e0e0;
+    display: flex;
+    padding: 20px;
+}
+
+#header {
+    display: flex;
+}
+
+h2 {
+    a{
+        color: #E2001A;
+        text-decoration: none;
+        font-weight: lighter;
+    }
+}
+
+#photo-row-one {
+    display: flex;
+}
+
+#photo-row-two {
+    display: flex;
+}
+
+.aula-pg {
+    padding: 20px;
+    max-width: 500px;
+    max-height: 300px;
+}
