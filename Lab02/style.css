@@ -1,5 +1,7 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 footer {
@@ -11,36 +13,123 @@ h4 {
     color: white;
     padding: 20px;
     font-weight: lighter;
+    margin: 0;
+}
+
+h3 {
+    font-weight: lighter;
+    font-size: 35px;
+    margin-top: 0;
 }
 
 #content {
     background-color: #e0e0e0;
     display: flex;
+    gap: 20px;
+    padding: 40px;
+}
+
+#item1, #item2, #item3 {
+    flex: 1;
     padding: 20px;
 }
 
 #header {
     display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+#header h2:first-of-type {
+    margin-left: auto;
 }
 
 h2 {
+    margin: 0;
     a{
         color: #E2001A;
         text-decoration: none;
         font-weight: lighter;
+        font-size: 40px;
+        padding: 0 30px;
+        border-right: 1px solid black;
     }
 }
 
-#photo-row-one {
-    display: flex;
+h2:last-child a {
+    border-right: none;
+    padding-right: 0;
 }
 
-#photo-row-two {
+#photo-row-one, #photo-row-two {
     display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 .aula-pg {
-    padding: 20px;
-    max-width: 500px;
-    max-height: 300px;
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+#logo-pjatk {
+    width: 200px;
+}
+
+p {
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+
+    #header {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    #logo-pjatk {
+        margin-bottom: 20px;
+    }
+
+    #header h2:first-of-type {
+        margin-left: 0;
+    }
+
+    #header h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    h2 a {
+        display: block;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+        padding: 5px 0;
+        font-size: 30px;
+    }
+
+    h2:last-child a {
+        border-bottom: none;
+    }
+
+    #content {
+        flex-direction: column;
+        padding: 10px;
+
+        h3 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+
+    #photo-row-one, #photo-row-two {
+        flex-direction: column;
+    }
 }
