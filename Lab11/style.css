@@ -1,0 +1,185 @@
+:root {
+    --bg-color: #fbfbfd;
+    --text-main: #1d1d1f;
+    --text-muted: #86868b;
+    --card-bg: #ffffff;
+    --border-radius: 12px;
+    --accent: #0071e3;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    background: var(--card-bg);
+}
+
+h1 {
+    margin: 0;
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    gap: 2rem;
+}
+
+.sidebar {
+    flex: 1;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    padding: 1rem;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.album-item {
+    padding: 0.8rem;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.album-item:last-child {
+    border-bottom: none;
+}
+.album-item:hover {
+    background: #f5f5f7;
+    outline: var(--accent);
+    color: var(--accent);
+}
+
+.content {
+    flex: 3;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    padding: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.form-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    outline: var(--accent);
+    border-color: var(--accent);
+}
+
+button {
+    background: var(--text-main);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: inherit;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #000;
+}
+
+.lightbox {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 2px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}

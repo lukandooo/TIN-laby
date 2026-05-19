@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laby 11</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>Albumy Fotograficzne</h1>
+</header>
+
+<div class="container">
+    <aside class="sidebar">
+        <h2 style="margin-top:0">Wybierz album</h2>
+        <div id="album-list">Ładowanie albumów...</div>
+    </aside>
+
+    <main class="content">
+        <h2 id="album-title">Wybierz album z listy po lewej stronie</h2>
+        <p id="album-desc" style="color: var(--text-muted); display: none;">Kliknij miniaturkę, aby powiększyć.</p>
+
+        <div id="gallery" class="gallery-grid">
+        </div>
+
+        <div class="form-section" id="form-section" style="display: none;">
+            <h2>Dodaj nowe zdjęcie do tego albumu</h2>
+            <form id="add-photo-form">
+                <input type="hidden" id="form-album-id">
+                <div class="form-group">
+                    <input type="text" id="form-title" placeholder="Tytuł zdjęcia" required>
+                </div>
+                <div class="form-group">
+                    <input type="url" id="form-url" placeholder="URL pełnego zdjęcia (np. https://via.placeholder.com/600)" required>
+                </div>
+                <div class="form-group">
+                    <input type="url" id="form-thumbnail" placeholder="URL miniaturki (np. https://via.placeholder.com/150)" required>
+                </div>
+                <button type="submit">Zapisz zdjęcie</button>
+            </form>
+        </div>
+    </main>
+</div>
+
+<div class="lightbox" id="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="Powiększone zdjęcie">
+</div>
+
+</body>
+</html>
